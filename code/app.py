@@ -116,7 +116,7 @@ elif menu == "Projects":
 
     st.title("🔥 DevOps Projects")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
         st.subheader("🚀 CI/CD Pipeline")
@@ -129,6 +129,9 @@ elif menu == "Projects":
     with col3:
         st.subheader("📊 Monitoring Stack")
         st.write("Prometheus + Grafana monitoring system")
+    with col4:
+        st.subheader("📊 Devops full course")
+        st.write("Complete DevOps Roadmap 2026 | Learn CI/CD, Docker, Kubernetes, Cloud & AI in 6 Hours")
 
 # ---------- Learning ----------
 elif menu == "Learning":
@@ -138,3 +141,4 @@ elif menu == "Learning":
     st.video("https://youtu.be/gLptmcuCx6Q")
     st.video("https://youtu.be/sVlo7W3iDDQ")
     st.video("https://youtu.be/-4e3ewcTupM")
+    st.video("https://youtu.be/6Vx4DuW_g4A")
