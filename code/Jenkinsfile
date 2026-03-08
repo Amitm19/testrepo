@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        IMAGE_NAME = "amitmkhavatgoppa/devops-masterclass:${GIT_COMMIT}"
+        IMAGE_NAME = "amitmkhavatgoppa/devops-masterclass:latest:${GIT_COMMIT}"
     }
     stages{
         stage('git-checkout'){
@@ -39,6 +39,11 @@ pipeline{
                 sh '''
                     docker push ${IMAGE_NAME}
                 '''
+            }
+        }
+        stage('Success'){
+            steps{
+                echo "Docker image built and pushed successfully!"
             }
         }
     }
