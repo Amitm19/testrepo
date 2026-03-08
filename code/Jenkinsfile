@@ -18,5 +18,12 @@ pipeline{
                 '''
             }
         }
+        stage('Testing the image'){
+            steps{
+                sh '''
+                    docker run -d -p 9000:8501 --name devops-masterclass ${IMAGE_NAME}
+                '''
+            }
+        }
     }
 }
