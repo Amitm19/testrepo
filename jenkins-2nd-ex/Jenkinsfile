@@ -15,10 +15,17 @@ pipeline{
                 '''
             }
         }
-        stage('Disk-Used'){
+        stage('Disk-file-system'){
             steps{
                 sh '''
                 df -kh
+                '''
+            }
+        }
+        stage('Disk-usage'){
+            steps{
+                sh '''
+                du -sch .
                 '''
             }
         }
