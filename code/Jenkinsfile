@@ -9,7 +9,7 @@ pipline{
         stage('build'){
             steps{
                 sh '''
-                printenv
+                    printenv
                 '''
             }
         }
