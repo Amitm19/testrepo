@@ -41,7 +41,7 @@ pipeline{
                 '''
             }
         }
-        stage('Success'){
+        stage('Project build Success'){
             steps{
                 echo "Docker image built and pushed successfully!"
             }
